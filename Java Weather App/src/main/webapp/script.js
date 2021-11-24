@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=Dayton&units=imperial&appid=aabc79365145ee6586ad7e1960f6fd3f";
+  var apiID = config.API_ID;
+  var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=Dayton&units=imperial&appid=" + apiID;
 
   $.getJSON(apiURL, function(data) {
       console.log(data);
