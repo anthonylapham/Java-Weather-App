@@ -23,11 +23,13 @@ $('#submitButton').click(function(){
       //$('#wicon').attr('src', iconurl);
       document.getElementById('wicon').src= iconurl;
 
-      if(data.weather.description == "clear sky"){
+	 //Need to figure out how to change background based on weather data
+
+      /*if(data.weather.description == "clear sky"){
 		document.body.style.background = rgb(135, 203, 222);
 		} else if(data.weather.description == 'overcast clouds'){
 			document.body.style.background = rgb(182, 182, 180);
-		}
+		}*/
 
 
 	 
