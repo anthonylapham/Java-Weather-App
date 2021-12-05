@@ -9,15 +9,31 @@ $(document).ready(function() {
 $('#submitButton').click(function(){
 	var inputValue = document.querySelector('#inputValue').value;
 	var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputValue + "&units=imperial&appid=" + apiID;
+	
 	  $.getJSON(apiURL, function(data) {
       console.log(data);
+	  var iconcode = data.weather[0].icon;
+      //var iconurl = "http://openweathermap.org/img/w" + "n/" + iconcode + "@2x.png";
+      var iconurl = "https://openweathermap.org/img/wn/" + iconcode + "@2x.png";
       document.getElementById('weather').innerHTML = data['weather'][0]['description'];
       //document.getElementById('geo').innerHTML = "latitude: " + data.current_observation.display_location.latitude + " longitude: " + data.current_observation.display_location.longitude;
       document.getElementById('temp').innerHTML = data.main.temp;
       document.getElementById('city').innerHTML = data.name;
       document.getElementById('country').innerHTML = data.sys.country;
-      document.getElementById('icon').src= data.weather.icon;
+      //$('#wicon').attr('src', iconurl);
+      document.getElementById('wicon').src= iconurl;
+
+      if(data.weather.description == "clear sky"){
+		document.body.style.background = rgb(135, 203, 222);
+		} else if(data.weather.description == 'overcast clouds'){
+			document.body.style.background = rgb(182, 182, 180);
+		}
+
+
+	 
   });
+
+	
 });
 
 	
