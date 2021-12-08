@@ -8,6 +8,9 @@ weather description, temperature in Fahrenheit, City, Country, and finally displ
 
 Instructions:
 
+Prior to setting up your server, go [here](https://openweathermap.org/api) to obtain the api key necessary to run the application. You will need to set up a config file and 
+place the api key inside.
+
 This project was built in Eclipse and runs utilizing Tomcat Apache Server version 9. Along with the HTML, CSS, and JS, you will need the Java Servlet and WebXML version 4.0. 
 If you are starting from scratch and need to set up Eclipse and Tomcat, please read [here](https://www.javatpoint.com/how-to-build-a-web-application-using-java#First-Web-Application). 
 Once the server is set up, right click on the html file, and click where it says "Run on" to run the application on the server. Once the application is running on the server, 
