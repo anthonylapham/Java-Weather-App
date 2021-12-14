@@ -25,11 +25,17 @@ $('#submitButton').click(function(){
 
 	 //Need to figure out how to change background based on weather data
 
-      /*if(data.weather.description == "clear sky"){
-		document.body.style.background = rgb(135, 203, 222);
-		} else if(data.weather.description == 'overcast clouds'){
-			document.body.style.background = rgb(182, 182, 180);
-		}*/
+      if(data.weather.description == "clear sky"){
+		document.body.style.backgroundColor = rgb(135, 203, 222);
+		} else if(data.weather.description === 'overcast clouds'){
+			document.body.style.backgroundColor = rgb(182, 182, 180);
+		}else if(data.weather.description === "broken clouds"){
+			document.body.style.backgroundColor = rgb(245,245,245);
+		}else if(data.weather.description === "light snow"){
+			document.body.style.backgroundColor = rgb(255,250,250);
+		}else if(data.weather.description === 'few clouds'){
+			document.body.style.backgroundColor = rgb(253, 234, 199);
+		}
 
 
 	 
