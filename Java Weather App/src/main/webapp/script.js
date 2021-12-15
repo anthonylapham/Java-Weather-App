@@ -36,7 +36,7 @@ $('#submitButton').click(function(){
 		}else if(data.weather.description === 'few clouds'){
 			document.body.style.backgroundColor = rgb(253, 234, 199);
 		}else if(data.weather.description === 'mist'){
-			document.body.style.backgroundColor = rgb(188, 187, 169);
+			document.body.style.backgroundColor = rgb(189, 187, 169);
 		}
 
 
